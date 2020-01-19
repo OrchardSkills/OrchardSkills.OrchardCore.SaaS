@@ -1,0 +1,79 @@
+@model RegisterUserViewModel
+<style>
+    .hidden {
+        display: none;
+    }
+
+    .jumbotron {
+        background: url("/SaaS/images/OrchardCore-2560x1440.png") no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+
+
+    input[type=radio]:checked + label > img {
+        border: 1px solid #fff;
+        box-shadow: 0 0 3px 3px #090;
+    }
+</style>
+
+<div class="jumbotron">
+</div>
+
+<div>
+<h2>Web Hosting, A SaaS Muti-Tenant Website</h2>
+</div>
+<form asp-action="Index" method="post">
+    <input asp-for="Handle" type="hidden" />
+    <div class="form-group">
+        <label asp-for="Email">@T["Email"]</label>
+        <small class="text-muted">- Please provide a valid email address to send you a link that will activate the site.</small>
+        <input class="form-control" asp-for="Email" type="email" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SiteName">@T["Site Name"]</label>
+        <small class="text-muted">- The name of the site that will be created.</small>
+        <input class="form-control" asp-for="SiteName" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RecipeName">@T["Recipe"]</label>
+        <small class="text-muted">- Orchard Core websites can be preconfigured with custom content and templates. The following examples will give you an idea of what you can build with it.</small>
+        <div class="row">
+            <div class="col-md-4 box">
+                <input id="agency" type="radio" name="RecipeName" value="Agency" class="hidden" autocomplete="off" checked>
+                <label class="btn btn-light" for="agency">
+                    <img src="/SaaS/themes/agency.jpg" title="Agency" class="img-thumbnail img-check">
+                </label>
+            </div>
+            <div class="col-md-4 box">
+                <input id="blog" type="radio" name="RecipeName" value="Blog" class="hidden" autocomplete="off">
+                <label class="btn btn-light" for="blog">
+                    <img src="/SaaS/themes/blog.jpg" title="Blog" class="img-thumbnail img-check">
+                </label>
+            </div>
+            <div class="col-md-4 box">
+                <input id="comingsoon" type="radio" name="RecipeName" value="ComingSoon" class="hidden" autocomplete="off">
+                <label class="btn btn-light" for="comingsoon">
+                    <img src="/SaaS/themes/comingsoon.jpg" title="Coming soon" class="img-thumbnail img-check">
+                </label>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class=" form-check-input" asp-for="AcceptTerms" required />
+        <label class="form-check-label" asp-for="AcceptTerms">@T["I agree with the"] <a href="/terms">@T["Terms and Conditions"]</a></label>
+        <small class="text-muted">We use the email address to create a demo site. Here is our <a href="/privacy">Privacy Policy</a>.</small>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">@T["Submit"]</button>
+    </div>
+
+    @Html.ValidationSummary(false, "", new { @class = "alert-danger" })
+</form>
+<script at="Foot">$("#navbar").remove();</script>

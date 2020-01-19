@@ -1,0 +1,52 @@
+{
+  "name": "SaaS",
+  "displayName": "SaaS",
+  "description": "A SaaS Multi-Tenant website.",
+  "author": "Orchard Skills",
+  "website": "http://orchardskills.net",
+  "version": "2.0",
+  "issetuprecipe": true,
+  "categories": [ "default" ],
+  "tags": [ "developer", "default" ],
+  "steps": [
+    {
+      "name": "feature",
+      "disable": [],
+      "enable": [
+        "OrchardCore.Admin",
+        "OrchardCore.Diagnostics",
+        "OrchardCore.Email",
+        "OrchardCore.HomeRoute",
+        "OrchardCore.Localization",
+        "OrchardCore.Features",
+        "OrchardCore.Navigation",
+        "OrchardCore.Recipes",
+        "OrchardCore.Resources",
+        "OrchardCore.Roles",
+        "OrchardCore.Settings",
+        "OrchardCore.Tenants",
+        "OrchardCore.Themes",
+        "SaaS",
+        "OrchardCore.Users",
+
+        // Themes
+        "TheTheme",
+        "TheAdmin",
+        "SafeMode"
+      ]
+    },
+    {
+      "name": "themes",
+      "admin": "TheAdmin",
+      "site": "TheTheme"
+    },
+    {
+      "name": "settings",
+      "HomeRoute": {
+        "Action": "Index",
+        "Controller": "Home",
+        "Area": "SaaS"
+      }
+    }
+  ]
+}
