@@ -4,6 +4,6 @@ using OrchardCore.Modules.Manifest;
     Name = "SaaS",
     Author = "Orchard Skills",
     Website = "http://OrchardSkills.com",
-    Version = "2.0.0",
+    Version = "1.0.0-rc2",
     Description = "A SaaS Multi-Tenant website."
 )]

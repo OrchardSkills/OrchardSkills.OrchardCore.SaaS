@@ -4,7 +4,7 @@
   "description": "A SaaS Multi-Tenant website.",
   "author": "Orchard Skills",
   "website": "http://orchardskills.net",
-  "version": "2.0",
+  "version": "1.0.0-rc2",
   "issetuprecipe": true,
   "categories": [ "default" ],
   "tags": [ "developer", "default" ],
