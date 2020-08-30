@@ -262,7 +262,7 @@ Right click on the "Recipe" folder and the "Add New Item..."
 
 ![SaaS-027](https://user-images.githubusercontent.com/59172485/91002829-ecd84500-e58c-11ea-8721-15d5f32656d2.png)
 
-Add the file "sass.recipe.json".
+Add the file "saas.recipe.json".
 
 
 
