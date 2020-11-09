@@ -900,7 +900,7 @@ Your site is now activated.
 
 # Conclusion
 
-With the powerful features pf the Orchard Core framework, we were able to create a Multi-Tenant, SaaS, Web Hosting Service with just a single Web Application.
+With the powerful features of the Orchard Core framework, we were able to create a Multi-Tenant, SaaS, Web Hosting Service with just a single Web Application.
 
 # GitHub
 
